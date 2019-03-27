@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+	<head>
+	<title>picowebclient</title>
+	<meta content = "text/html; charset = UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 2"> 
+	<link rel="stylesheet" href="javascript\library\primeui\themes\home\theme.css"></link>
+	<link rel="stylesheet" type="text/css" href="javascript\library\font-awesome-4.7.0\css\font-awesome.css" ></link>
+    <link rel="stylesheet" href="javascript\library\jquery-ui-1.12.1.custom\jquery-ui.css" ></link>
+	<link rel = "stylesheet" href = "css\grid\simple-grid.css"> </link>
+	<link rel = "stylesheet" href = "css\picoui.css"> </link>
+	<link rel = "stylesheet" href = "javascript\library\primeui\primeui.min.css"> </link>
+	
+    
+	
+	<script src="javascript\library\jquery\jquery-3.3.1.js"></script>
+	<script src="javascript\library\jquery-ui-1.12.1.custom\jquery-ui.js"></script>
+	<script src="javascript\library\primeui\primeui.min.js"></script>
+	<script src="javascript\library\highcharts\code\highcharts.js"></script>
+	<script src="javascript\picoui.js" ></script>
+	<script type="text/javascript" src="javascript\library\mustache.js-master\mustache.min.js"></script>
+	<script src="javascript\SetTrig.js"></script>
+	
+	
+
+	</head>
+	
+	<body>
+	<h1 class = "centered">Клиентское приложение для Pico6000</h1>
+	<div class = "container">
+		<div class ="row">
+			<div class="col-2 big red" id="button1" style="width:150px" >
+				<div>
+					<div><a>Channel A</a></div>
+						<div >
+							<ul>
+								<li ><a onclick = "channel_on()">On</a></li>
+								<li ><a onclick = "channel_off()">Off</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			
+			<div class="col-2 big yellow" id = "button2"  style="width:150px">
+				<div>
+					<div><a>Channel B</a></div>
+						<div onclick = "menu_on()">
+							<ul>
+								<li><a>On</a></li>
+								<li><a>Off</a></li>
+							</ul>
+						</div>
+					</div>
+			</div>
+			<div class="col-2 big blue" id = "button3"  style="width:150px">
+				<div>
+					<div><a>Channel C</a></div>
+						<div onclick = "menu_on()">
+							<ul>
+								<li><a>On</a></li>
+								<li><a>Off</a></li>
+							</ul>
+						</div>
+					</div>
+			</div>
+
+			<div class="col-2 big green" id="button4"  style="width:150px">
+				<div>
+					<div><a>Channel D</a></div>
+						<div onclick = "menu_on()">
+							<ul>
+								<li><a>On</a></li>
+								<li><a>Off</a></li>
+							</ul>
+						</div>
+					</div>
+			</div>
+			
+			<div class="col-2 middle red">
+				Setting Trigger 
+				<input type="button" value="Страница настроек триггера" onclick="open_New_Win('SetTrigger.html')">
+			</div>
+
+		
+			
+			
+		</div>
+		
+	</div>
+	
+	<div class = "container">
+			<div class = "row">
+				<div class = "col-10" id = "chart">chart</div>
+			</div>
+	</div>
+		
+	<div class = "container">
+		
+		<h4 class="first">Basic</h4>
+			<div class="ui-grid ui-grid-responsive" style="width:200px">
+				<div class="ui-grid-row">
+					<div class="ui-grid-col-1"><input type="checkbox" name="chk" id="chk1" value="1" onchange="check_on()"/></div>
+					
+					<div class="ui-grid-col-11"><label for="cb1" class="ui-widget">Auto</label></div>
+				</div>
+				
+				
+			</div>
+			<div class="row">
+				<h3>Максимум</h3>
+				<input id="y_max" type="text" size="30"/>
+			</div>
+			
+			<div class="row">
+				<h3>Минимум</h3>
+				<input id="y_min" type="text" size="30"/>
+			</div>
+			
+			<button id="button10" type="button" onclick = "maximum()" >Применить</button>
+	</div>
+	
+	</body>
+</html>
